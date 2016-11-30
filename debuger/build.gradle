@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayOrg = 'sebapps'
+    bintrayOrg = 'sebapp'
     bintrayName = 'debuger'
 
     publishedGroupId = 'com.seb.debuger'
@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/Sergb39/sebapps'
     gitUrl = 'https://github.com/Sergb39/sebapps.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.1'
 
     developerId = 'sergb39'
     developerName = 'Sergey Brazgovka'
@@ -105,6 +105,8 @@ if (project.hasProperty("android")) { // Android libraries
     task javadoc(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+        destinationDir = file("../javadoc/")
+        failOnError false
     }
 } else { // Java libraries
     task sourcesJar(type: Jar, dependsOn: classes) {
