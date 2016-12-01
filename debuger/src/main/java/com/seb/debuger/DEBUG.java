@@ -10,10 +10,10 @@ import java.util.ArrayList;
  */
 
 public class DEBUG {
-    public static final boolean DEBUG_MOD = BuildConfig.DEBUG;
-    public static final String TAG = " ► ";
-    public static boolean showCodeHyperLink = true;
-    public static ArrayList<Timer> mTimerHolder = new ArrayList<>();
+    protected static boolean DEBUG_MOD = true;
+    private static final String TAG = " ► ";
+    private static boolean showCodeHyperLink = true;
+    private static ArrayList<Timer> mTimerHolder = new ArrayList<>();
 
     /**
      * Prints debug message if debug is true
