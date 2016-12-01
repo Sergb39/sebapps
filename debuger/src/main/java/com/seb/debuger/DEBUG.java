@@ -14,7 +14,7 @@ public class DEBUG {
     private static final String TAG = " ► ";
     private static boolean showCodeHyperLink = true;
     private static ArrayList<Timer> mTimerHolder = new ArrayList<>();
-
+    private static int LEVEL = 4;
     /**
      * Prints debug message if debug is true
      */
@@ -34,7 +34,7 @@ public class DEBUG {
         } else {
             print = String.valueOf(message);
         }
-        String msg = trace(Thread.currentThread().getStackTrace(), 3);
+        String msg = trace(Thread.currentThread().getStackTrace(), LEVEL);
         if (tag == null) {
             Log.d("DEBUG" + TAG, print + msg);
         } else {
@@ -59,7 +59,7 @@ public class DEBUG {
         } else {
             print = String.valueOf(message);
         }
-        String msg = trace(Thread.currentThread().getStackTrace(), 3);
+        String msg = trace(Thread.currentThread().getStackTrace(), LEVEL);
         if (tag == null) {
             Log.i("INFO" + TAG, print + msg);
         } else {
@@ -84,7 +84,7 @@ public class DEBUG {
         } else {
             print = String.valueOf(message);
         }
-        String msg = trace(Thread.currentThread().getStackTrace(), 3);
+        String msg = trace(Thread.currentThread().getStackTrace(), LEVEL);
         if (tag == null) {
             Log.w("WARNING" + TAG, print + msg);
         } else {
@@ -108,7 +108,7 @@ public class DEBUG {
         } else {
             print = String.valueOf(message);
         }
-        String msg = trace(Thread.currentThread().getStackTrace(), 3);
+        String msg = trace(Thread.currentThread().getStackTrace(), LEVEL);
         if (tag == null) {
             Log.e("ERROR" + TAG, print + msg);
         } else {

@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/Sergb39/sebapps'
     gitUrl = 'https://github.com/Sergb39/sebapps.git'
 
-    libraryVersion = '1.0.2'
+    libraryVersion = '1.0.3'
 
     developerId = 'sergb39'
     developerName = 'Sergey Brazgovka'
@@ -33,7 +33,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.1"
+        versionName "1.2"
 
     }
     buildTypes {
