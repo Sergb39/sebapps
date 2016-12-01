@@ -14,7 +14,7 @@ ext {
     siteUrl = 'https://github.com/Sergb39/sebapps'
     gitUrl = 'https://github.com/Sergb39/sebapps.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2'
 
     developerId = 'sergb39'
     developerName = 'Sergey Brazgovka'
@@ -33,19 +33,23 @@ android {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+        debug {
+            debuggable true
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.0.1'
 }
 
